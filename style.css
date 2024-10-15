@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+#startmask {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+#startmask h1, button {
+    margin: 25px;
+    color: white;
+    background-color: orange;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#startmask button {
+    padding: 5px;
+}
+
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#answers span {
+    display: block;
+}
+
+#answers p {
+
+}
