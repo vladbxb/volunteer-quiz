@@ -12,7 +12,7 @@
         <button type="button" id="start">Start</button>
     </div>
     <div id="answers">
-        <select name="questions" id="questionSelection">
+        <select id="questionSelection" name="questions">
             <option value="default">Selecteaza intrebarea</option>
             <option value="1">Intrebarea 1</option>
             <option value="2">Intrebarea 2</option>
@@ -79,15 +79,28 @@
             <option value="63">Intrebarea 63</option>
             <option value="64">Intrebarea 64</option>
         </select>
-        <span>
-            <label>
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
+        <span id="selection" class="flex-container">
+            <label id="answerPoints">
+                <p>Punctaj</p>
+                <label for="answerPoints">0<br />
+                    <input id="0" name="points" type="radio">
+                </label>
+                <label for="answerPoints">1<br />
+                    <input id="1" name="points" type="radio">
+                </label>
+                <label for="answerPoints">2<br />
+                    <input id="2" name="points" type="radio">
+                </label>
+                <label for="answerPoints">3<br />
+                    <input id="3" name="points" type="radio">
+                </label>
+                <label for="answerPoints">4<br />
+                    <input id="4" name="points" type="radio">
+                </label>
             </label>
         </span>
         <button id="addAnswer">Adauga</button>
+        <p id="statistics">Statistici:</p>
         <!--
         <span>
             <label>

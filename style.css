@@ -39,6 +39,11 @@ body {
     display: block;
 }
 
-#answers p {
+label {
+    float: left;
+    text-align: center;
+}
 
+.flex-container {
+    display: inline;
 }

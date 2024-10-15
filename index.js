@@ -1,8 +1,14 @@
 const startButton = document.getElementById("start");
 const startMask = document.getElementById("startmask");
 
-const answerBox = document.getElementById("answers")
-const answerButton = document.getElementById("addAnswer")
+const answerBox = document.getElementById("answers");
+const answerButton = document.getElementById("addAnswer");
+
+const questionChoice = document.getElementById("questionSelection");
+
+const points = document.getElementsByName("points");
+
+const statisticsBox = document.getElementById("statistics");
 
 const scale = [
     [17, 31, 44, 45, 50, 52, 57, 59],
@@ -15,17 +21,58 @@ const scale = [
     [4, 26, 30, 41, 43, 47, 48, 58]
 ];
 
-let scalePunctaj = new Array(8);
+let scalePunctaj = new Array(8).fill(0);
 
 startButton.addEventListener("click", event => {
         startMask.style.display = "none";
         startButton.style.display = "none";
-})
+});
 
 answerButton.addEventListener("click", event => {
-        for (let i = 0; i < 8; i++)
+        let gasit = false;
+        for (let i = 0; i < points.length && gasit === false; i++)
         {
-            for (let j = 0; j < 8; j++)
-                console.log(i + ' ' + j);
+            if (points[i].checked)
+            {
+                numOfPoints = parseInt(points[i].id);
+                gasit = true;
+            }
         }
-})
+        gasit = false;
+        let questionNumber = parseInt(questionChoice.value);
+        for (let i = 0; i < 8 && gasit === false; i++)
+        {
+            let st = 0;
+            let dr = 7;
+            while (st <= dr)
+            {
+                let mid = st + Math.floor((dr - st) / 2);
+                if (scale[i][mid] == questionNumber)
+                {
+                    st = dr + 1;
+                    gasit = true;
+                    scalePunctaj[i] = scalePunctaj[i] + numOfPoints;
+                    console.log("Intrebarea apartine scale-ului " + (i + 1));
+                    console.log("punctaj: " + scalePunctaj[i]);
+                    if (scalePunctaj[i] >= 17)
+                    {
+                        console.log("!! Testul a fost picat!")
+                        answerButton.disabled = true;
+                        answerButton.style.backgroundColor = "red";
+                        answerButton.style.cursor = "not-allowed";
+                    }
+                    statisticsString = "Statistici\n";
+
+                    for (i = 0; i < 8; i++)
+                    {
+                        statisticsString = statisticsString + "Scale " + (i + 1) + ": " + scalePunctaj[i] + "\n";
+                    }
+                    statisticsBox.innerText = statisticsString;
+                }
+                if (scale[i][mid] < questionNumber)
+                    st = mid + 1;
+                else
+                    dr = mid - 1;
+            }
+        }
+});
