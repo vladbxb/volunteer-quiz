@@ -4,6 +4,7 @@ button {
 }
 
 body {
+    font-family: "Open Sans", sans-serif;
     color: black;
     background-color: lightskyblue;
     margin: 0;
@@ -141,3 +142,6 @@ input {
     margin: auto;
 }
 
+#pointsTable tr td {
+    font-weight: bold;
+}
