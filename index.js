@@ -3,6 +3,7 @@ const startMask = document.getElementById("startmask");
 
 const answerBox = document.getElementById("answers");
 const answerButton = document.getElementById("addAnswer");
+const restartButton = document.getElementById("restart");
 
 const questionChoice = document.getElementById("questionSelection");
 
@@ -22,6 +23,10 @@ const scale = [
     [4, 26, 30, 41, 43, 47, 48, 58]
 ];
 
+const defaultColor = "orange";
+const correctColor = "rgb(50, 205, 50)";
+const notAllowedColor = "rgb(237, 41, 57)";
+
 let scalePunctaj = new Array(8).fill(0);
 
 // let statisticsString = "Statistici\n";
@@ -33,6 +38,40 @@ let scalePunctaj = new Array(8).fill(0);
 
 // statisticsBox.innerText = statisticsString;
 
+disableButton = (button) => {
+    button.disabled = true;
+    button.style.backgroundColor = notAllowedColor;
+    button.style.cursor = "not-allowed";
+}
+
+enableButton = (button) => {
+    button.disabled = false;
+    button.style.backgroundColor = defaultColor;
+    button.style.cursor = "auto"
+}
+
+resetCorrect = () => {
+    for (let i = 0; i < 8; i++) {
+        let currentScaleColor = document.getElementById("scale-" + (i + 1)).style.color;
+        // console.log("scale-" + (i + 1) + "is " + currentScaleColor);
+        if (currentScaleColor == correctColor) {
+            document.getElementById("scale-" + (i + 1)).style.color = "rgb(0, 0, 0)";
+            document.getElementById("scale-" + (i + 1) + "-p").style.color = "rgb(0, 0, 0)";
+            break;
+        }
+    }
+}
+
+changeCorrect = (k) => {
+    resetCorrect();
+    document.getElementById("scale-" + (k + 1)).style.color = correctColor;
+    document.getElementById("scale-" + (k + 1) + "-p").style.color = correctColor;
+}
+
+setScaleScore = (k) => {
+    document.getElementById("scale-" + (k + 1) + "-p").innerText = scalePunctaj[k] + "p"
+}
+
 startButton.addEventListener("click", event => {
         startMask.style.display = "none";
         startButton.style.display = "none";
@@ -42,15 +81,14 @@ answerButton.addEventListener("click", event => {
         if (questionChoice.value === "default")
             alert("Eroare: trebuie sa selectezi o intrebare")
         let gasit = false;
-        for (let i = 0; i < points.length && gasit === false; i++)
+        for (let i = 0; i < points.length; i++)
         {
             if (points[i].checked)
             {
                 numOfPoints = parseInt(points[i].id);
-                gasit = true;
+                break;
             }
         }
-        gasit = false;
         let questionNumber = parseInt(questionChoice.value);
         for (let i = 0; i < 8 && gasit === false; i++)
         {
@@ -64,23 +102,15 @@ answerButton.addEventListener("click", event => {
                     st = dr + 1;
                     gasit = true;
                     scalePunctaj[i] = scalePunctaj[i] + numOfPoints;
-                    console.log("Intrebarea apartine scale-ului " + (i + 1));
-                    console.log("punctaj: " + scalePunctaj[i]);
+                    changeCorrect(i);
                     if (scalePunctaj[i] >= 17)
                     {
-                        console.log("!! Testul a fost picat!")
-                        answerButton.disabled = true;
-                        answerButton.style.backgroundColor = "red";
-                        answerButton.style.cursor = "not-allowed";
+                        disableButton(answerButton);
+                        alert("Testul a fost picat!")
+                        restartButton.style.backgroundColor = correctColor;
                     }
-                    //statisticsString = "Statistici\n";
 
-                    for (i = 0; i < 8; i++)
-                    {
-                        // statisticsString = statisticsString + "Scale " + (i + 1) + ": " + scalePunctaj[i] + "\n";
-                        document.getElementById("scale-" + (i + 1)).innerText = scalePunctaj[i] + "p"
-                    }
-                    //statisticsBox.innerText = statisticsString;
+                    setScaleScore(i);
                 }
                 if (scale[i][mid] < questionNumber)
                     st = mid + 1;
@@ -88,4 +118,14 @@ answerButton.addEventListener("click", event => {
                     dr = mid - 1;
             }
         }
+});
+
+restartButton.addEventListener("click", event => {
+    scalePunctaj.fill(0);
+    resetCorrect();
+    for (i = 0; i < 8; i++)
+            setScaleScore(i);
+    
+    enableButton(answerButton);
+    restartButton.style.backgroundColor = defaultColor;
 });

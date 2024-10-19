@@ -62,11 +62,12 @@ body {
     margin: auto;
 }
 
-#addAnswer {
-    display: block; /* Ensure the button behaves like a block-level element */
+#scoreboardButtons > button {
+    display: inline-block; /* Ensure the button behaves like a block-level element */
     margin-top: 10px; /* Add some space above the button */
     text-align: center;
     padding: 5px 20px; /* Adjust padding to give it a more button-like appearance */
+    margin-bottom: 30px;
 }
 
 label > input {
@@ -114,11 +115,6 @@ table {
     margin: auto;
     border: 1px solid black;
 }
-
-#scoreboard > button {
-    margin-bottom: 30px;
-}
-
 #questionSelection {
     margin-top: 20px;
     width: 100px;
@@ -140,3 +136,8 @@ input {
     padding-bottom: 20px;
     border: 1px solid black;
 }
+
+#box table {
+    margin: auto;
+}
+
