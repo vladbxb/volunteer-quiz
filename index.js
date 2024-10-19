@@ -29,6 +29,7 @@ const notAllowedColor = "rgb(237, 41, 57)";
 
 let scalePunctaj = new Array(8).fill(0);
 
+let questionNumber = "default";
 // let statisticsString = "Statistici\n";
 
 // for (i = 0; i < 8; i++)
@@ -79,43 +80,45 @@ startButton.addEventListener("click", event => {
 
 answerButton.addEventListener("click", event => {
         if (questionChoice.value === "default")
-            alert("Eroare: trebuie sa selectezi o intrebare")
-        let gasit = false;
-        for (let i = 0; i < points.length; i++)
-        {
-            if (points[i].checked)
+            alert("Eroare: trebuie sa selectezi o intrebare!")
+        else if (questionChoice.value != questionNumber) {
+            let gasit = false;
+            for (let i = 0; i < points.length; i++)
             {
-                numOfPoints = parseInt(points[i].id);
-                break;
-            }
-        }
-        let questionNumber = parseInt(questionChoice.value);
-        for (let i = 0; i < 8 && gasit === false; i++)
-        {
-            let st = 0;
-            let dr = 7;
-            while (st <= dr)
-            {
-                let mid = st + Math.floor((dr - st) / 2);
-                if (scale[i][mid] == questionNumber)
+                if (points[i].checked)
                 {
-                    st = dr + 1;
-                    gasit = true;
-                    scalePunctaj[i] = scalePunctaj[i] + numOfPoints;
-                    changeCorrect(i);
-                    if (scalePunctaj[i] >= 17)
-                    {
-                        disableButton(answerButton);
-                        alert("Testul a fost picat!")
-                        restartButton.style.backgroundColor = correctColor;
-                    }
-
-                    setScaleScore(i);
+                    numOfPoints = parseInt(points[i].id);
+                    break;
                 }
-                if (scale[i][mid] < questionNumber)
-                    st = mid + 1;
-                else
-                    dr = mid - 1;
+            }
+            questionNumber = parseInt(questionChoice.value);
+            for (let i = 0; i < 8 && gasit === false; i++)
+            {
+                let st = 0;
+                let dr = 7;
+                while (st <= dr)
+                {
+                    let mid = st + Math.floor((dr - st) / 2);
+                    if (scale[i][mid] == questionNumber)
+                    {
+                        st = dr + 1;
+                        gasit = true;
+                        scalePunctaj[i] = scalePunctaj[i] + numOfPoints;
+                        changeCorrect(i);
+                        if (scalePunctaj[i] >= 17)
+                        {
+                            disableButton(answerButton);
+                            alert("Testul a fost picat!")
+                            restartButton.style.backgroundColor = correctColor;
+                        }
+
+                        setScaleScore(i);
+                    }
+                    if (scale[i][mid] < questionNumber)
+                        st = mid + 1;
+                    else
+                        dr = mid - 1;
+                }
             }
         }
 });
