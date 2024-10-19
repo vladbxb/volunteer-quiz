@@ -39,6 +39,8 @@ startButton.addEventListener("click", event => {
 });
 
 answerButton.addEventListener("click", event => {
+        if (questionChoice.value === "default")
+            alert("Eroare: trebuie sa selectezi o intrebare")
         let gasit = false;
         for (let i = 0; i < points.length && gasit === false; i++)
         {
