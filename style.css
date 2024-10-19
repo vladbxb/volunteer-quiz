@@ -8,12 +8,11 @@ body {
     background-color: lightskyblue;
     margin: 0;
     font-size: 28px;
-    overflow: hidden;
 }
 
 #content {
     padding: 3vw;
-    margin: 60px;
+    margin: 2vh;
 }
 
 .big {
@@ -21,6 +20,7 @@ body {
 }
 
 #startmask {
+    font-size: 16px;
     width: 100vw;
     height: 100vh;
     background-color: lightskyblue;
@@ -39,6 +39,7 @@ body {
     border: 1px solid black;
     padding: 50px;
     border-radius: 10px;
+    font-size: 28px;
 }
 
 #startmask button {
@@ -82,6 +83,10 @@ th {
     text-align: left;
 }
 
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 #pointsTable th {
     text-align: center;
 }
@@ -103,7 +108,7 @@ table {
     width: 80vw;
     background-color: white;
     font-size: 30px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     margin-bottom: 15px;
     margin: auto;
     border: 1px solid black;
@@ -113,10 +118,7 @@ table {
     margin-bottom: 30px;
 }
 
-#questionSelection {
-    width: 70px;
-    height: 30px;
-}
+
 
 input {
     accent-color: orange;
@@ -126,7 +128,3 @@ input {
     text-align: center;
 }
 
-table, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
