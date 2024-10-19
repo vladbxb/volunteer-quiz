@@ -10,6 +10,7 @@ const points = document.getElementsByName("points");
 
 const statisticsBox = document.getElementById("statistics");
 
+
 const scale = [
     [17, 31, 44, 45, 50, 52, 57, 59],
     [1, 22, 24, 29, 32, 40, 56, 64],
@@ -22,6 +23,15 @@ const scale = [
 ];
 
 let scalePunctaj = new Array(8).fill(0);
+
+// let statisticsString = "Statistici\n";
+
+// for (i = 0; i < 8; i++)
+// {
+//     statisticsString = statisticsString + "Scale " + (i + 1) + ": " + scalePunctaj[i] + "\n";
+// }
+
+// statisticsBox.innerText = statisticsString;
 
 startButton.addEventListener("click", event => {
         startMask.style.display = "none";
@@ -61,13 +71,14 @@ answerButton.addEventListener("click", event => {
                         answerButton.style.backgroundColor = "red";
                         answerButton.style.cursor = "not-allowed";
                     }
-                    statisticsString = "Statistici\n";
+                    //statisticsString = "Statistici\n";
 
                     for (i = 0; i < 8; i++)
                     {
-                        statisticsString = statisticsString + "Scale " + (i + 1) + ": " + scalePunctaj[i] + "\n";
+                        // statisticsString = statisticsString + "Scale " + (i + 1) + ": " + scalePunctaj[i] + "\n";
+                        document.getElementById("scale-" + (i + 1)).innerText = scalePunctaj[i] + "p"
                     }
-                    statisticsBox.innerText = statisticsString;
+                    //statisticsBox.innerText = statisticsString;
                 }
                 if (scale[i][mid] < questionNumber)
                     st = mid + 1;

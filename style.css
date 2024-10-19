@@ -35,8 +35,23 @@ body {
     text-align: center;
 }
 
-#answers span {
-    display: block;
+.flex-center {
+    display: flex;  /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Center horizontally */
+    margin: auto;
+}
+
+table {
+    margin-bottom: 10px; /* Add some space between the table and the button */
+}
+
+#addAnswer {
+    display: block; /* Ensure the button behaves like a block-level element */
+    margin-top: 10px; /* Add some space above the button */
+    text-align: center;
+    padding: 5px 20px; /* Adjust padding to give it a more button-like appearance */
 }
 
 label {
@@ -44,6 +59,10 @@ label {
     text-align: center;
 }
 
-.flex-container {
-    display: inline;
+th, td {
+    text-align: center;
+}
+
+tr td:first-child {
+    font-weight: bold;
 }

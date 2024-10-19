@@ -6,12 +6,12 @@
     <title>Aplicatie web</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="flex-center">
     <div id="startmask" class="centered">
         <h1>Corector de teste pentru voluntarii la psihologie</h1>
         <button type="button" id="start">Start</button>
     </div>
-    <div id="answers">
+    <div id="answers" class="flex-center">
         <select id="questionSelection" name="questions">
             <option value="default">Selecteaza intrebarea</option>
             <option value="1">Intrebarea 1</option>
@@ -79,606 +79,87 @@
             <option value="63">Intrebarea 63</option>
             <option value="64">Intrebarea 64</option>
         </select>
-        <span id="selection" class="flex-container">
-            <label id="answerPoints">
-                <p>Punctaj</p>
-                <label for="answerPoints">0<br />
-                    <input id="0" name="points" type="radio">
-                </label>
-                <label for="answerPoints">1<br />
-                    <input id="1" name="points" type="radio">
-                </label>
-                <label for="answerPoints">2<br />
-                    <input id="2" name="points" type="radio">
-                </label>
-                <label for="answerPoints">3<br />
-                    <input id="3" name="points" type="radio">
-                </label>
-                <label for="answerPoints">4<br />
-                    <input id="4" name="points" type="radio">
-                </label>
-            </label>
-        </span>
-        <button id="addAnswer">Adauga</button>
-        <p id="statistics">Statistici:</p>
-        <!--
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        <span>
-            <label>
-                Intrebarea 1
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
-            </label>
-        </span>
-        -->
+        <div id="scoreboard">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>0</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+                <tr>
+                    <td><strong>Points:</strong></td>
+                    <label id="answerPoints">
+                        <td>
+                            <label for="answerPoints">
+                                <input id="0" name="points" type="radio">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="answerPoints">
+                                <input id="1" name="points" type="radio">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="answerPoints">
+                                <input id="2" name="points" type="radio">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="answerPoints">
+                                <input id="3" name="points" type="radio">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="answerPoints">
+                                <input id="4" name="points" type="radio">
+                            </label>
+                        </td>
+                    </label>
+                </tr>
+            </table>
+            <button id="addAnswer" class="flex-center">Add</button>
+        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>Scale 1:</td>
+                <td id="scale-1"></td>
+            </tr>
+            <tr>
+                <td>Scale 2:</td>
+                <td id="scale-2"></td>
+            </tr>
+            <tr>
+                <td>Scale 3:</td>
+                <td id="scale-3"></td>
+            </tr>
+            <tr>
+                <td>Scale 4:</td>
+                <td id="scale-4"></td>
+            </tr>
+            <tr>
+                <td>Scale 5:</td>
+                <td id="scale-5"></td>
+            </tr>
+            <tr>
+                <td>Scale 6:</td>
+                <td id="scale-6"></td>
+            </tr>
+            <tr>
+                <td>Scale 7:</td>
+                <td id="scale-7"></td>
+            </tr>
+            <tr>
+                <td>Scale 8:</td>
+                <td id="scale-8"></td>
+            </tr>
+        </table>
     </div>
     <script src="index.js"></script>
 </body>
