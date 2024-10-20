@@ -61,8 +61,6 @@ resetCorrect = () => {
             break;
         }
     }
-    questionNumber = "default";
-    questionChoice.value = "default";
 }
 
 changeCorrect = (k) => {
