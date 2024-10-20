@@ -23,9 +23,9 @@ const scale = [
     [4, 26, 30, 41, 43, 47, 48, 58]
 ];
 
-const defaultColor = "rgb(254, 216, 177)";
-const correctColor = "rgb(182, 199, 170)";
-const notAllowedColor = "rgb(30, 32, 30)";
+const defaultColor = "orange";
+const correctColor = "rgb(50, 205, 50)";
+const notAllowedColor = "rgb(237, 41, 57)";
 
 let scalePunctaj = new Array(8).fill(0);
 
