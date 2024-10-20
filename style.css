@@ -6,7 +6,7 @@ button {
 body {
     font-family: "Open Sans", sans-serif;
     color: black;
-    background-color: lightskyblue;
+    background-color: #A0937D;
     margin: 0;
     font-size: 28px;
 }
@@ -24,7 +24,7 @@ body {
     font-size: 16px;
     width: 100vw;
     height: 100vh;
-    background-color: lightskyblue;
+    background-color: #A0937D;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,16 +35,19 @@ body {
 
 #startmask h1, button {
     margin: 25px;
-    color: white;
-    background-color: orange;
-    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: #FED8B1;
+    border: 1px solid #A67B5B;
     padding: 50px;
     border-radius: 10px;
     font-size: 28px;
+    box-shadow: 10px 10px 5px 2px #6F4E37;
+    user-select: none;
 }
 
 #startmask button {
-    padding: 15px;
+    padding: 15px 40px;
+    cursor: pointer;
 }
 
 .centered {
@@ -86,7 +89,7 @@ th {
 }
 
 table, td, th {
-    border: 1px solid black;
+    border: 1.5px solid #54473F ;
     border-collapse: collapse;
 }
 
@@ -104,25 +107,29 @@ table {
     color: black;
     margin: 20px;    /* Add some space between the table and the button */
     align-items: flex-start;
-    background-color: #fff;
+    background-color: #E9EED9;
+    box-shadow: 7px 7px 5px 2px #54473F;
 }
 
 #scoreboard {
     width: 90vw;
-    background-color: white;
+    background-color: #9A7E6F;
     font-size: 30px;
     /* padding-top: 30px; */
     margin-bottom: 15px;
     margin: auto;
-    border: 1px solid black;
+    border-radius: 10px;
 }
 #questionSelection {
+    padding-left: 20px;
     margin-top: 20px;
-    width: 100px;
+    width: 40vw;
+    border-radius: 10px;
+    background-color: #FED8B1;
 }
 
 input {
-    accent-color: orange;
+    accent-color: #CBD2A4;
 }
 
 #answerPoints td {
@@ -131,11 +138,12 @@ input {
 
 #box {
     width: 90vw;
-    background-color: white;
+    background-color: #9A7E6F;
+    border-radius: 10px;
     margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border: 1px solid black;
+
 }
 
 #box table {
