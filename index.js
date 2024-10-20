@@ -61,24 +61,26 @@ resetCorrect = () => {
             break;
         }
     }
-    questionNumber = "default";
-    questionChoice.value = "default";
-}
+};
 
 changeCorrect = (k) => {
     resetCorrect();
     document.getElementById("scale-" + (k + 1)).style.color = correctColor;
     document.getElementById("scale-" + (k + 1) + "-p").style.color = correctColor;
-}
+};
 
 setScaleScore = (k) => {
     document.getElementById("scale-" + (k + 1) + "-p").innerText = scalePunctaj[k] + "p"
-}
+};
 
 startButton.addEventListener("click", event => {
         startMask.style.display = "none";
         startButton.style.display = "none";
 });
+
+questionChoice.onchange = () => {
+    document.getElementById("0").checked = true;
+};
 
 answerButton.addEventListener("click", event => {
         if (questionChoice.value === "default")
@@ -130,7 +132,8 @@ restartButton.addEventListener("click", event => {
     resetCorrect();
     for (i = 0; i < 8; i++)
             setScaleScore(i);
-    
+    questionNumber = "default";
+    questionChoice.value = "default";
     enableButton(answerButton);
     restartButton.style.backgroundColor = defaultColor;
 });
